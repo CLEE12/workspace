@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	border: 2px solid blue;
+	float: left;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('div').slice(2, 4).css('background', 'yellow');
+			$('div').slice(4).css('background', 'pink');
+		});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<button>버튼</button>
+</body>
+</html>

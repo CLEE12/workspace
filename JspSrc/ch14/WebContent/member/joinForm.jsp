@@ -1,0 +1,62 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="comm.css">
+<script type="text/javascript">
+	function chk() {
+		if (frm.passwd.value != frm.passwd2.value) {
+			alert("암호를 다시 입력하세요");
+			frm.passwd.value = "";
+			frm.passwd2.value = "";
+			frm.passwd.focus();
+			return false;
+		}
+		return true;
+	}
+	function idchk() {
+		window.open("idchk.jsp?id=" + frm.id.value, "",
+				"width='300' height='300'");
+	}
+</script>
+</head>
+<body>
+	<form action="joinPro.jsp" name="frm" onsubmit="return chk()">
+		<table border="1">
+			<caption>회원가입</caption>
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="id" required="required"><input
+					type="button" value="아이디체크" onclick="idchk()"></td>
+			</tr>
+			<tr>
+				<th>암호</th>
+				<td><input type="password" name="passwd" required="required"></td>
+			</tr>
+			<tr>
+				<th>암호확인</th>
+				<td><input type="password" name="passwd2" required="required"></td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td><input type="text" name="name" required="required"></td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td><input type="text" name="address" required="required"></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td><input type="text" name="tel" required="required"
+					placeholder="xxx-xxxx-xxxx" pattern="\d{2,3}-\d{3,4}-\d{4}"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="확인"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

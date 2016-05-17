@@ -1,0 +1,120 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.container ul {
+	display: inline;
+	/* inline은 하나씩 표시하는 기능 */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.item {
+	position: absolute;
+	/* 절대주소 */
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+#item1 .bgImage {
+	background: url('../images/image01.jpg');
+	background-size: cover;
+	/* cover는 이미지 비율 유지하면서 가득 채우도록 하는 기능 */
+	background-repeat: no-repeat;
+}
+
+#item2 .bgImage {
+	background: url('../images/image02.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#item3 .bgImage {
+	background: url('../images/image03.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#item4 .bgImage {
+	background: url('../images/image04.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.bgImage {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	/* 3초가 지나면 안보이게 */
+	-webkit-transition: opacity 3s;
+	/* 3초동안 투명도가 변함 */
+	-webkit-transition-timing-function: linear;
+	transition: opacity 3s;
+	transition-timing-function: linear;
+}
+
+.on .bgImage {
+	opacity: 1;
+	-webkit-transition: opacity 5s;
+	-webkit-transition-timing-function: linear;
+	transition: opacity 5s;
+	transition-timing-function: linear;
+}
+
+.typography {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: auto;
+	/* 글자가 보일만큼만 올려주기 */
+	margin: 0 auto;
+	/* 전환 효과를 위한 부분*/
+	opacity: 0;
+	top: 80%;
+	/* 제한높이는 80% */
+	-webkit-transition: opacity 1s, top 2s;
+	-webkit-transition-timing-function: linear;
+	transition: opacity 1s, top 2s;
+	transition-timing-function: linear;
+}
+
+.on .typography {
+	/* 전환 효과를 위한 부분*/
+	opacity: 1;
+	top: 70%;
+	-webkit-transition: opacity 2s, top 2s;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-delay: 2.5s;
+	transition: opacity 2s, top 2s;
+	transition-timing-function: ease-out;
+	/* 	transition은 이동
+	linear는 속도가 일정
+	ease-outsms 점차적으로 빨리짐 */
+	transition-delay: 2.5s;
+}
+
+.typography h1 {
+	font-family: Verdana;
+	font-size: 3em;
+	font-weight: bolder;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	color: #FFFFFF;
+}
+
+.typography h2 {
+	font-family: Verdana;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: black 0.1em 0.1em 0.2em;
+	color: #FFFFFF;
+}

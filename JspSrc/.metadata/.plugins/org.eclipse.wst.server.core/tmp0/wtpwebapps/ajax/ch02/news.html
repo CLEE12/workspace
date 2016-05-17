@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/httpRequest.js"></script>
+<script type="text/javascript">
+	function ne() {
+		sendRequest("news.jsp", null, result, 'get');
+	}
+	function result() {
+		var news = document.getElementById("n");
+		if (httpRequest.readyState == 4 && httpRequest.status == 200)
+			news.innerHTML = httpRequest.responseText;
+	}
+</script>
+</head>
+<body>
+	<button onclick="ne()">뉴스보기</button>
+	<div id="n"></div>
+</body>
+</html>

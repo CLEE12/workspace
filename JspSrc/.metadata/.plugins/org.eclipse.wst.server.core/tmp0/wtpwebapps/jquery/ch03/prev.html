@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+div {
+	padding: 10px;
+	float: LEFT;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var list = "";
+		$('#selectBtn').click(function() {
+			$('input[name=hobby]:checked').each(function() {
+				list += $(this).prev().text() + " ";
+			});
+			$('#contents').html(list);
+			list = "";
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<span class="item"> 음악감상 </span> <input type="checkbox" name="hobby"
+			value="music">
+	</div>
+	<div>
+		<span class="item"> 요가 </span> <input type="checkbox" name="hobby"
+			value="yoga">
+	</div>
+	<div>
+		<span class="item"> 독서 </span> <input type="checkbox" name="hobby"
+			value="reading">
+	</div>
+	<div>
+		<input type="button" id="selectBtn" value="취미 선택">
+	</div>
+	<div id="contents">결과</div>
+</body>
+</html>

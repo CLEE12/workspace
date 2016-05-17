@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		setTimeout(function() {
+			var val = $('option:selected').val();
+			alert(val);
+		}, 5000);
+	});
+</script>
+</head>
+<body>
+	<select>
+		<option>구렁일</option>
+		<option>구렁이</option>
+		<option>팔렁이</option>
+		<option>구렁삼</option>
+	</select>
+</body>
+</html>

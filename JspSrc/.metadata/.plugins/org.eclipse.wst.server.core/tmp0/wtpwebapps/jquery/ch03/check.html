@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	padding: 5px;
+}
+
+.item {
+	float: left;
+	width: 100px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#regBtn').click(function() {
+			if ($('#userId').val() == "") {
+				alert("아이디를 입력하세요");
+				$('#userId').focus();
+				return;
+			}
+			if ($('#userName').val() == "") {
+				alert("이름을 입력하세요");
+				$('#userName').focus();
+				return;
+			}
+			if ($('#pwd').val() == "") {
+				alert("암호를 입력하세요");
+				$('#pwd').focus();
+				return;
+			}
+			if ($('#pwdConfirm').val() == "") {
+				alert("암호확인을 입력하세요");
+				$('#pwdConfirm').focus();
+				return;
+			}
+			if ($('#pwd').val() != $('#pwdConfirm').val()) {
+				alert('암호가 일차하지 않습니다');
+				$('#pwd').focus();
+				return;
+			}
+			alert("회원 가입을 축하합니다");
+		});
+		$('#cl').click(function() {
+			$('#userId').val("");
+			$('#userName').val("");
+			$('#pwd').val("");
+			$('#pwdConfirm').val("");
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<span class="item">아이디 *</span> <input id="userId" type="text">
+	</div>
+	<div>
+		<span class="item">이름 * </span> <input id="userName" type="text">
+	</div>
+	<div>
+		<span class="item">암호 * </span> <input id="pwd" type="password">
+	</div>
+	<div>
+		<span class="item">암호 확인 * </span> <input id="pwdConfirm"
+			type="password">
+	</div>
+	<input type="button" id="regBtn" value="회원가입">
+	<input type="button" id="cl" value="자료 삭제">
+</body>
+</html>

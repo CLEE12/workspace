@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+* {
+	font-size: 20px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var weeks = [ "Sunday", "Monday", "Tuesday", "Wedensday", "Thursday",
+				"Friday", "Saturday" ];
+		var wks = $.map(weeks, function(item, index) {
+			return item.substr(0, 3);
+			/* 0부터 3개를 가져온다. */
+		});
+		$('div').text(weeks.join(', '));
+		$('p').text(wks.join(', '));
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<p></p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').click(function() {
+			$(this).html(function(index, item) {
+				return item + " ★ ";
+			});
+		});
+		setInterval(function() {
+			$('h1').last().trigger('click');
+		}, 1000);
+	});
+</script>
+</head>
+<body>
+	<h1>시작 :</h1>
+	<h1>시작 :</h1>
+</body>
+</html>

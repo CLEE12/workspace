@@ -1,0 +1,6 @@
+@CHARSET "UTF-8";
+body { background-color: #E1FF36; font-family: 굴림체; }
+table { background-color: #FFE5C2; width: 100%; }
+th, td { padding: 10px;	}
+tr:HOVER {	background-color: #FF3636; color: white; }
+caption { font-size: 20px; }

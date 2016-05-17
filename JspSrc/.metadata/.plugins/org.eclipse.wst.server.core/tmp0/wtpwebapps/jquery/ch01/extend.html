@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var obj = {
+			name : '길동'
+		};
+		$.extend(obj, {
+			gender : '남자',
+			part : '베이스키타'
+		});
+		var out = '';
+		$.each(obj, function(key, item) {
+			out += key + " : " + item + "\n";
+		});
+		alert(out);
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

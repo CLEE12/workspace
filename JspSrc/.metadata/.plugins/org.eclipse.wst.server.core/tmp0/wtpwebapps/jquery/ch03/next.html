@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			// $(this).next().removeAttr('src');
+			$('img').removeAttr('src');
+		});
+	});
+</script>
+</head>
+<body>
+	<button>어트리뷰트 값 제거하기</button>
+	<img src="../images/im0.jpg" title="똘이군" alt="똘아이그림">
+</body>
+</html>

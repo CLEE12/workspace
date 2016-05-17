@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	tr:first-child { background-color: orange; }
+	table { width: 100%; }
+	tr { background-color: yellow; }
+	tr:hover { background-color: green;  color: white; }
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.get('http://localhost:8181/ch18/XmlList?deptno=0',
+				function(data){
+			$('#tbData').append('<tr><th>사번</th><th>이름</th>'+
+				'<th>업무</th><th>급여</th></tr>');
+			$(data).find('emp').each(function(){
+				$('#tbData').append('<tr><td>'+
+					$(this).find('empno').text()+'</td><td>'+
+					$(this).find('ename').text()+'</td><td>'+
+					$(this).find('job').text()+'</td><td align=right>'+
+					$(this).find('sal').text()+"</td></tr>");
+			});
+		});
+	});
+</script></head><body>
+	<table id="tbData" border="1"></table>
+</body>
+</html>

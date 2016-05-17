@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	border: 3px solid red;
+	padding: 3px;
+	margin: 5px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').click(function() {
+			var header = $('h1', this).text();
+			var ph = $('p', this).text();
+			alert(header + " : " + ph);
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>Header 1</h1>
+		<p>Paragraph</p>
+	</div>
+	<div>
+		<h1>Header 2</h1>
+		<p>Paragraph</p>
+	</div>
+	<div>
+		<h1>Header 3</h1>
+		<p>Paragraph</p>
+	</div>
+</body>
+</html>

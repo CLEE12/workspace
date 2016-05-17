@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.a0 {
+	color: white;
+	background-color: red;
+}
+
+.a1 {
+	color: white;
+	background-color: green;
+}
+
+.a2 {
+	color: white;
+	background-color: blue;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').addClass(function(index) {
+			return 'a' + index;
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>불금이다</h1>
+	<h1>불금이다</h1>
+	<h1>불금이다</h1>
+</body>
+</html>

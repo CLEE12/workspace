@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	cursor: pointer;
+	margin: 10px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').mousemove(
+				function(event) {
+					$('p:first').html(
+							'브라우저 x좌표 : ' + event.clientX + '<br> 브라우저 y죄표 : '
+									+ event.clientY + '<p>');
+					$('p:last').html(
+							'화면기준 x좌표 : ' + event.screenX + '<br> 화면기준 y죄표 : '
+									+ event.screenY);
+				});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<p></p>
+	<p></p>
+</body>
+</html>

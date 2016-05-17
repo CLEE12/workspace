@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	float: left;
+	margin: 25px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var fruits = [ '산딸기', '집딸기', '판딸기', '뱀딸기', '죽은딸기' ];
+		var cars = [ '제규어', 'BMW', '벤츠', '말두타', '캐딜락' ];
+		$.each(fruits, function(index, item) {
+			// $('#fruit_list').append('<li>'+item+'</li>');
+			$('<li>' + item + '</li>').appendTo('#fruit_list');
+		});
+		$.each(cars, function(index, item) {
+			$('#car_list').append('<li>' + item + '</li>');
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<b>내가 좋아하는 과일 </b>
+		<ul id="fruit_list"></ul>
+	</div>
+	<div>
+		<b>갖고 싶은 차 </b>
+		<ul id="car_list"></ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	float: left;
+	width: 200px;
+	margin: 10px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('menu1').click(function() {
+			$.ajax({
+				
+			});
+		});
+	}};
+</script>
+</head>
+<body>
+
+</body>
+</html>

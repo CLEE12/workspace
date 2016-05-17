@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.a {
+	width: 200px;
+	height: 200px;
+	border: 2px solid red;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$.noConflict();
+	j = jQuery;
+	// $(function() {
+	j(function() {
+		//	$('div').addClass('a');
+		j('div').addClass('a');
+	});
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('input').val('');
+			// $('input').keyup();
+		});
+		$('input').keyup(function() {
+			var tx = $(this).val();
+			console(tx);
+		});
+	});
+	function console(tx) {
+		$('#console').text(tx);
+	}
+</script>
+</head>
+<body>
+	<button>버튼</button>
+	<input type="text" value="val 메소드 연습 중" size="80">
+	<div id="console"></div>
+</body>
+</html>

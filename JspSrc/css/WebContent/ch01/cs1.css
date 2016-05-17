@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+
+h1 {
+	color: #C3ED60;
+}
+
+p {
+	color: fuchsia;
+	font-size: 2em;
+}

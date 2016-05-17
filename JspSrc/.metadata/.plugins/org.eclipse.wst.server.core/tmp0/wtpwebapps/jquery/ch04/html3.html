@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var str = [ '대박', '쪽박', '옹박' ];
+		/* 		$('div').html(function(i) {
+		 return '<h1>'+str[i]+'</h1>';
+		 }); */
+		$('div').text(function(i) {
+			return '<h1>' + str[i] + '</h1>';
+		});
+	});
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

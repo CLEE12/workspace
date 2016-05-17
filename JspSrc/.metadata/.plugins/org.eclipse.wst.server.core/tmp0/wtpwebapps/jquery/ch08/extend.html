@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var settings = {
+			name : "대박이",
+			size : 5,
+			global : true
+		};
+		var options = {
+			name : "foobar",
+			size : 10,
+			age : 20
+		};
+		console.log("before extend settings : ");
+		console.log(settings);
+		console.log("options : ");
+		console.log(options);
+		$.extend(settings, options);
+		console.log("after extend settings : ");
+		console.log(settings);
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var resultText = "";
+		var s = $('p,span,div.simpletext1');
+		resultText += "검색된 엘리먼트 개수 : " + s.length + "\n";
+		s.each(function() {
+			resultText += $(this).text() + "\t";
+		});
+		alert($.trim(resultText));
+	});
+</script>
+</head>
+<body>
+	<span>simple</span>
+	<div class='simpletext1'>jQuery</div>
+	<div>basic</div>
+	<p>example</p>
+</body>
+</html>

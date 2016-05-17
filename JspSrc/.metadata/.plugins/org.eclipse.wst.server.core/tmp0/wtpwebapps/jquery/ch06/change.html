@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#all_check').change(function() {
+			if (this.checked) {
+				$('div').children().prop('checked', 'checked');
+			} else {
+				$('div').children().removeAttr('checked');
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<input type="checkbox" id="all_check" />
+	<label>전부</label>
+	<div id="check_item">
+		<input type="checkbox" /><label>대박</label> <input type="checkbox" /><label>쪽박</label>
+		<input type="checkbox" /><label>옹박</label>
+	</div>
+</body>
+</html>

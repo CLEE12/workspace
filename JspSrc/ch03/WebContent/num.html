@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if (!frm.num.value) {alert("숫자를 입력해야지 쨔샤!");
+			frm.num.focus(); return false;}
+		if (isNaN(frm.num.value) {alert("헐 숫자냐!");
+			frm.num.focus(); frm.num.value="";
+			return false;
+		}	return true;
+	}
+</script>
+</head>
+<body>
+	<h3>누적할 숫자를 입력하세요</h3>
+	<form action="Num.jsp" name="frm" onsubmit="return chk()">
+		숫자 : <input type="text" name="num">
+		<p>
+			<input type="submit" value="확인">
+	</form>
+</body>
+</html>

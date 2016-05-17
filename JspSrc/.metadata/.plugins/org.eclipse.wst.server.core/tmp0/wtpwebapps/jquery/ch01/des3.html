@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+em {
+	line-height: 50px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* 		$('em').css('line-height', '50px'); */
+		$("div em").css("border", "2px solid red").css('margin', '10px');
+		$('span em').css('border', '2px solid blue').css('margin', '20px');
+		console.log("갯수: " + $('div em').length);
+	});
+</script>
+</head>
+<body>
+	<div>
+		<em>Hello!</em> <em>jQuery</em> <em>forever</em>
+	</div>
+	<span><em>Good Bye!</em> <em>javascript</em></span>
+</body>
+</html>

@@ -1,0 +1,17 @@
+package Prac1;
+
+public class OrderForm {
+	public static void main(String[] args) {
+		if(args == null || args.length == 0)
+			System.out.println("Usage : java OrderForm [Coffee name],[number of coffee]");
+	    }
+	    else if(args.length == 1) {
+	    	System.out.println("Press input number of coffee");
+	    	System.out.println("Usage : java OrderForm [Coffee name], [number of coffee]");
+	    }
+	    else if(args.length == 2) {
+	    	String coffeeName = args[0];
+	    }
+	    
+
+}

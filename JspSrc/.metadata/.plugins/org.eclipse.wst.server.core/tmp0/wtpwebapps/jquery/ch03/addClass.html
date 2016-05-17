@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+.red {
+	background-color: red;
+}
+
+.green {
+	background-color: green;
+}
+
+.yellow {
+	background-color: yellow;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			$('li').addClass(function(i, item) {
+				var addClass;
+				if (item == 'red') {
+					addClass = 'green';
+					$('p').text((i + 1) + '번째에 녹색배경');
+				} else
+					addClass = 'yellow';
+				return addClass;
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button>배경색 변경</button>
+	<ul>
+		<li>흰 배경색
+		<li class="red">배경색
+		<li>흰 배경색
+	</ul>
+	<p>그린 배경색은 없음 addClass 메소드가 성공적으로 수행하면 그린 배경색을 갖음. addClass 메소드가
+		성공적으로 수행 못하면 빨간 배경색을 갖음.</p>
+</body>
+</html>

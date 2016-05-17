@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 120px;
+	height: 120px;
+	float: left;
+	border: 3px solid green;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	var xml = '<friends>'
+			+ '<friend><name>연하진</name><language>JSP</language></friend>'
+			+ '<friend><name>윤명월</name><language>jQuery</language></friend>'
+			+ '<friend><name>윤하린</name><language>Java</language></friend>'
+			+ '</friends>';
+	$(function() {
+		var xmlDoc = $.parseXML(xml);
+		$(xmlDoc).find('friend').each(
+				function() {
+					var out = '<div><h1>' + $(this).find('name').text()
+							+ '</h1>' + '<p>' + $(this).find('language').text()
+							+ '</p></div>';
+					document.body.innerHTML += out;
+				});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

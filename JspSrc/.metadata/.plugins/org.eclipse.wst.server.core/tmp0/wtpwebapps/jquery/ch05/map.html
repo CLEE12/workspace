@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	color: red;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('p').append($('li').map(function() {
+			return $(this).text().toUpperCase();
+		}).get().join(', '));
+	});
+</script>
+</head>
+<body>
+	<p>
+		<b> 찾은 값 : </b>
+	</p>
+	<ul>
+		<li>apple</li>
+		<li>바나나</li>
+		<li>orange</li>
+	</ul>
+</body>
+</html>

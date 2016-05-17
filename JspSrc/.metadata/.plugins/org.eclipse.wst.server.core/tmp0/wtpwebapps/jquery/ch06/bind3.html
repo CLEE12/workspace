@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('a').bind('click', function() {
+			$('img').attr('src', $(this).attr('href'));
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="../images/image3.jpg"> 똘이 사진 </a></li>
+		<li><a href="../images/image4.jpg"> 을이 사진 </a></li>
+	</ul>
+	<img>
+</body>
+</html>

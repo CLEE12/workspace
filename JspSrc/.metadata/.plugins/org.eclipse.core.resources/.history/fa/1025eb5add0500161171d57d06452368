@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/httpRequest.js"></script>
+<script type="text/javascript">
+	function send() {
+		var params = 'name='+encodeURIComponent(frm.name.value);
+		sendRequest('hello.jsp', params, result, 'post');
+	}
+	function result() {
+		if (httpRequest.readyState == 4) 
+			if (httpRequest.status == 200) {
+				var a = document.getElementById("a");
+				a.innerHTML=httpRequest.responseText;
+			//	alert(httpRequest.responseText);
+			} else alert("헐 ~ 에라");			
+	}	
+</script></head><body><form name="frm">
+	이름 : <input type="text" name="name"><p>
+	<input type="button" value="확인" onclick="send()">
+</form>
+<div id="a"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h2>리스트</h2>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<!-- data-filter 는 조회기능 -->
+				<li data-role="list-divider">외톨이</li>
+				<li><a><img alt="" src="../images/ie.png">
+						<h3>익스플로러</h3>
+						<p>micro soft</p> <span data-role="ui-li-aside">Bill</span> <span
+						data-role="ui-li-count">70</span></a></li>
+				<li data-role="list-divider">웹표준</li>
+				<li><a><img alt="" src="../images/google.png">
+						<h3>크롬</h3>
+						<p>구글</p> <span data-role="list-li-aside">Eric</span> <span
+						data-role="list-li-count">12</span></a></li>
+				<li><a><img alt="" src="../images/FF.png">
+						<h3>파이어폭스</h3>
+						<p>모질라</p> <span data-role="list-li-aside">Gary</span> <span
+						data-role="list-li-count">12</span></a></li>
+				<li><a><img alt="" src="../images/Safari.png">
+						<h3>사파리</h3>
+						<p>애플</p> <span data-role="list-li-aside">잡스</span> <span
+						data-role="list-li-count">12</span></a></li>
+			</ul>
+		</div>
+		<div data-role="footer">
+			<h2>바닥글</h2>
+		</div>
+	</div>
+</body>
+</html>

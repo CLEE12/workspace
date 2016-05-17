@@ -1,0 +1,41 @@
+package event;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Window2Ex extends Frame  {
+	TextArea ta;
+	public Window2Ex() {
+		ta = new TextArea();
+		add(ta);
+		setSize(200,200);
+		setVisible(true);
+		addWindowListener(new WindowHandler());	
+	}
+	public static void main(String[] args) {
+		 
+		new Window2Ex();
+	}
+ class WindowHandler implements WindowListener {// 클래스 속에 클래스 : Inner
+	public void windowOpened(WindowEvent e) {	
+		ta.append("창열기\n");
+	}
+	public void windowClosing(WindowEvent e) {	
+		System.exit(0);
+	}
+	public void windowClosed(WindowEvent e) {
+		ta.append("종료\n");
+	}
+	public void windowIconified(WindowEvent e) {
+		ta.append("아이콘\n");
+	}
+	public void windowDeiconified(WindowEvent e) {
+		ta.append("아이콘해제\n");
+	}
+	public void windowActivated(WindowEvent e) {
+		ta.append("활성화\n");
+	}
+	public void windowDeactivated(WindowEvent e) {
+		ta.append("비활성화\n");
+	}
+	}
+}

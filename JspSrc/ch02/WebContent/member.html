@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if (!frm.name.value) {
+			alert("이름 ?");
+			frm.name.focus();
+			return false;
+		}
+		if (!frm.age.value) {
+			alert("나이 ?");
+			frm.age.focus();
+			return false;
+		}
+		if (isNaN(frm.age.value)) {
+			alert("나이는 숫자 ?");
+			frm.age.focus();
+			frm.age.value = "";
+			return false;
+		}
+		var check = false;
+		for (var i = 0; i < frm.email.length; i++) {
+			if (frm.email[i].checked) {
+				check = true;
+				break;
+			}
+		}
+		if (!check) {
+			alert("우편 하나는 수령하세요");
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body bgcolor="#FFFFA4">
+	<form action="Member" name="frm" method="post" onsubmit="return chk()">
+		<table border="1" bgcolor="#CEF76E">
+
+			<caption>
+				<h2>회원가입</h2>
+			</caption>
+
+			<tr>
+				<th>이름</th>
+				<td><input type="text" name="name"></td>
+			</tr>
+
+			<tr>
+				<th>나이</th>
+				<td><input type="text" name="age"></td>
+			</tr>
+
+			<tr>
+				<th>성별</th>
+				<td><label for="m1">남자</label><input type="radio" name="gender"
+					value="남자" id="m1"><br> <label for="m2">여자</label><input
+					type="radio" name="gender" value="여자" id="m2" checked="checked"></td>
+			</tr>
+
+			<tr>
+				<th>취미</th>
+				<td><select name="hobby">
+						<option>울기
+						<option>짜기
+						<option>졸기
+						<option>카톡하기
+				</select></td>
+			</tr>
+
+			<tr>
+				<th>우편수령</th>
+				<td><label for="e1">광고</label><input type="checkbox"
+					name="email" value="광고" id="e1"><br> <label for="e2">정보</label><input
+					type="checkbox" name="email" value="정보" id="e2"><br> <label
+					for="e3">스팸</label><input type="checkbox" name="email" value="스팸"
+					id="e3"></td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="확인">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

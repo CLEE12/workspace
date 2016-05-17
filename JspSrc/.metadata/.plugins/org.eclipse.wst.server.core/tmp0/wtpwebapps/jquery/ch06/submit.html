@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#frm').submit(function() {
+			var name = $('#name').val();
+			var pass = $('#pass').val();
+			alert(name + " : " + pass);
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="" id="frm">
+		이름 : <input type="text" name="name" id="name">
+		<p>
+			암로 : <input type="password" name="pass" id="pass">
+		<p>
+			<input type="submit" id="submit" value="확인">
+	</form>
+</body>
+</html>

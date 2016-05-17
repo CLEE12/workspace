@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		if (!frm.name.value) {
+			alert("너 이름이 뭐니 ?");
+			frm.name.focus();
+			return false;
+		}
+		if (!frm.addr.value) {
+			alert("너 어디 살어 ?");
+			frm.addr.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<h2>이름과 주소</h2>
+	<form action="Person" name="frm" method="post" onsubmit="return chk()">
+		이름 : <input type="text" name="name">
+		<p>
+			주소 : <input type="text" name="addr">
+		<p>
+			<input type="submit" value="확인">
+	</form>
+</body>
+</html>

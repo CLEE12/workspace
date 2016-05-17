@@ -1,0 +1,16 @@
+package ch03;
+
+public class If5 {
+	public static void main(String[] args) {
+		int num = Integer.parseInt(args[0]);
+		if (num == 1)
+			System.out.println("안녕하세요");
+		else if (num == 2)
+			System.out.println("반갑습니다");
+		else if (num == 3)
+			System.out.println("처음 뵙겠습니다");
+		else
+			System.out.println("누구세요 허걱");
+	}
+	
+}

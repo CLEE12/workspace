@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	width: 50px;
+	height: 50px;
+	background-color: orange;
+	position: relative;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('div').animate({
+			left : '+=20'
+		}, 2000).animate({
+			width : '+=20'
+		}, 2000).animate({
+			height : '+=20'
+		}, 2000);
+
+		setTimeout(function() {
+			$('div').clearQueue();
+			$('div').hide();
+		}, 8000);
+	});
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

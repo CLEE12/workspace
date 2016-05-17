@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div {
+	background: #3d9a44;
+	margin: 3px;
+	width: 80px;
+	height: 40px;
+	float: left;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#up').click(function() {
+			$('div').slideUp();
+		});
+		$('#down').click(function() {
+			$('div').slideDown('slow');
+		});
+		$('#toggle').click(function() {
+			$('div').slideToggle('slow');
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="up">올리기</button>
+	<button id="down">내리기</button>
+	<button id="toggle">왕복</button>
+	<p>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

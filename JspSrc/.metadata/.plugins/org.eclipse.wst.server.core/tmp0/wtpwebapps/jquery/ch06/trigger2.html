@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').click(function(index, data1, data2) {
+			alert(data1 + " : " + data2);
+		});
+		$('h1').eq(1).trigger('click', [ '뭐야', '허걱' ]);
+	});
+</script>
+</head>
+<body>
+	<h1>대박</h1>
+	<h1>쪽박</h1>
+</body>
+</html>

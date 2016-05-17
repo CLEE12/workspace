@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var id = document.getElementById("userId");
+		var pass = document.getElementById("password");
+		var save = document.getElementById("saveId").checked;
+		if (id.value.length == 0) {
+			alert("ID가 없네");
+			id.focus();
+			return false;
+		}
+		if (pass.value.length == 0) {
+			alert("암호가 없네");
+			pass.focus();
+			return false;
+		}
+		if (save) {
+			window.localStorage.setItem("userId", id.value);
+			window.localStorage.setItem("saveId", "y");
+		} else {
+			window.localStorage.removeItem("userId");
+			window.localStorage.removeItem("saveId");
+		}
+		return true;
+	}
+	function load() {
+		var userId = window.localStorage.getItem("userId");
+		var saveId = window.localStorage.getItem("saveId");
+		if (saveId == 'y') {
+			document.getElementById("userId").value = userId;
+			document.getElementById("saveId").checked = true;
+		}
+	}
+</script>
+</head>
+<body onload="load()">
+	<form action="login.jsp" onsubmit="return chk()">
+		아이디 : <input type="text" name="userId" id="userId"> <label
+			for="saveId">아이디저장</label><input type="checkbox" id="saveId">
+		<p>
+			암호 : <input type="password" name="password" id="password">
+		<p>
+			<input type="submit" value="확인">
+	</form>
+</body>
+</html>

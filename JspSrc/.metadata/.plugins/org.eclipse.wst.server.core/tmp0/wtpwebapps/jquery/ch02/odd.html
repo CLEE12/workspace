@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+table {
+	width: 75%;
+	border: 1px solid green;
+}
+
+td {
+	color: blue;
+	font-weight: bold;
+	border: 1px solid green;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('tr:odd').css('background', 'green');
+		$('tr:even').css('background', 'red');
+		$('tr:first').css('background', 'pink');
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>one</td>
+		</tr>
+		<tr>
+			<td>two</td>
+		</tr>
+		<tr>
+			<td>three</td>
+		</tr>
+		<tr>
+			<td>four</td>
+		</tr>
+		<tr>
+			<td>five</td>
+		</tr>
+	</table>
+</body>
+</html>

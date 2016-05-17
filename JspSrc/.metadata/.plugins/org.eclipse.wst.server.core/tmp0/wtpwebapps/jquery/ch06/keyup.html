@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('textarea').keyup(function() {
+			var len = $(this).val().length;
+			var rem = 100 - len;
+			if (rem >= 0) {
+				$('h2').css('color', 'blue');
+			} else
+				$('h2').css('color', 'red');
+			$('h2').html(rem);
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>자기소개서</h1>
+	<h2>100</h2>
+	<textarea rows="5" cols="35"></textarea>
+</body>
+</html>

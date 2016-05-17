@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h2>모바일에서 Input</h2>
+		</div>
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<label for="range">범위</label> <input type="range" id="range" min="0"
+					max="100" value="50" data-track-theme="a" data-theme="b">
+			</div>
+			<div data-role="fieldcontain">
+				<label for="slider">슬라이더</label> <select id="slider"
+					data-role="slider">
+					<option value="on">On</option>
+					<option value="off">Off</option>
+				</select>
+			</div>
+			<div data-role="fieldcontain">
+				<label for="selectMenu">Select Menu:</label> <select
+					name="selectMenu" id="selectMenu">
+					<optgroup label="옵션 레이블"></optgroup>
+					<option value="optoin1">Option1</option>
+					<option value="optoin2">Option2</option>
+					<option value="optoin3" selected>Option3</option>
+					<option value="optoin4">Option4</option>
+				</select>
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>CheckBox:</legend>
+					<input type="checkbox" name="checkbox1" id="checkbox1" /> <label
+						for="checkbox1">Check1</label> <input type="checkbox"
+						name="checkbox2" id="checkbox2" /> <label for="checkbox2">Check2</label>
+					<input type="checkbox" name="checkbox3" id="checkbox3" /> <label
+						for="checkbox3">Check3</label>
+				</fieldset>
+			</div>
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>Radio Button:</legend>
+					<input type="radio" name="radio1" id="radio1" value="choice1"
+						checked="checked" /> <label for="radio1">Radio1</label> <input
+						type="radio" name="radio1" id="radio2" value="choice2" /> <label
+						for="radio2">Radio2</label> <input type="radio" name="radio1"
+						id="radio3" value="choice3" /> <label for="radio3">Radio3</label>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+	<div data-role="footer">
+		<h2>바닥글</h2>
+	</div>
+	</div>
+</body>
+</html>

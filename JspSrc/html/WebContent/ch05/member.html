@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function chk() {
+		var str = "";
+		if (!frm.name.value) {
+			alert("이름 ?");
+			frm.name.focus();
+			return;
+		}
+		if (!frm.age.value) {
+			alert("나이 ?");
+			frm.age.focus();
+			return;
+		}
+		if (isNaN(frm.age.value)) {
+			alert("나이가 문자냐 ?");
+			frm.age.focus();
+			frm.age.value = "";
+			return;
+		}
+		str += "이름 : " + frm.name.value + "\n";
+		str += "나이 : " + frm.age.value + "\n취미 : ";
+		for (var i = 0; i < frm.hobby.length; i++) {
+			if (frm.hobby[i].checked)
+				str += frm.hobby[i].value;
+		}
+		str += "\n좋아하는 가수 : ";
+		for (var i = 0; i < frm.singer.length; i++) {
+			if (frm.singer[i].selected)
+				str += frm.singer[i].value;
+		}
+		alert(str);
+	}
+</script>
+</head>
+<body bgcolor="#CFFF24">
+	<form action="" name="frm">
+		<table border="1" bgcolor="#FFFF92">
+			<caption>
+				<h2>회원가입</h2>
+			</caption>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>나이</td>
+				<td><input type="text" name="age"></td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td><label for="h1">졸기</label><input type="checkbox"
+					name="hobby" id="h1" value="졸기"> <label for="h2">짜기</label><input
+					type="checkbox" name="hobby" id="h2" value="짜기"> <label
+					for="h3">울기</label><input type="checkbox" name="hobby" id="h3"
+					value="울기"> <label for="h4">독서</label><input
+					type="checkbox" name="hobby" id="h4" value="독서"></td>
+			</tr>
+			<tr>
+				<td>좋아하는 가수</td>
+				<td><select name="singer" multiple="multiple" size="4">
+						<option>이승기
+						<option>이선희
+						<option>설현
+						<option>하니
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="button" value="확인" onclick="chk()"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

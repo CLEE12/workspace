@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="comm.css">
+<script type="text/javascript">
+	function chk() {
+		if (frm.passwd.value != frm.dbPass.value) {
+			alert("암호가 다릅니다");
+			frm.passwd.focus();
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+
+	<form action="deletePro.do" name="frm" onsubmit="return chk()">
+		<input type="hidden" name="pageNum" value="${pageNum}"> <input
+			type="hidden" name="num" value="${num}"> <input type="hidden"
+			name="dbPass" value="${dbPass}"> 암호 : <input type="password"
+			name="passwd" required="required">
+		<p>
+			<input type="submit" value="확인">
+	</form>
+</body>
+</html>

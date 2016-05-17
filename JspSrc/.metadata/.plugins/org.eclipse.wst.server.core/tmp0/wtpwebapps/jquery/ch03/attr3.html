@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('img').attr('src', function() {
+			return '../images/' + this.alt;
+		});
+	});
+</script>
+</head>
+<body>
+	<img alt="im10.jpg" src="" title="곰발바닥">
+	<img alt="im11.jpg" src="" title="내발바닥">
+	<img alt="im12.jpg" src="">
+</body>
+</html>

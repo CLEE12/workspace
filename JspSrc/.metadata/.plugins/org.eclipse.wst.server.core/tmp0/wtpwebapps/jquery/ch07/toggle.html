@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+span {
+	display: none;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button:first').click(function() {
+			$(this).next().toggle();
+		});
+		$('button:last').click(function() {
+			$(this).next().toggle('slow', function() {
+				$(this).css('background', 'yellow');
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button>Show/Hide It</button>
+	<span>안녕하세요.</span>
+	<br>
+	<button>Show/Hide It slow</button>
+	<span>반갑습니다.</span>
+</body>
+</html>

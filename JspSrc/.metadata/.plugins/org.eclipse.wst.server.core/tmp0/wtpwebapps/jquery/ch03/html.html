@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p {
+	margin: 14px;
+	cursor: pointer;
+}
+
+b {
+	text-decoration: underline;
+}
+
+button {
+	cursor: pointer;
+}
+
+#console {
+	font-size: 20px;
+	color: blue;
+	font-weight: bold;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('p').click(function() {
+			var str = $(this).html();
+			//	str = $(this).text();
+			console(str);
+		});
+	});
+	function console(str) {
+		$('#console').text(str);
+	}
+</script>
+</head>
+<body>
+	<p>
+		<b>html()은 </b>엘리먼트의 <span id="tag">내용을 </span>
+	</p>
+	<p>
+		HTML 형식의<span id="text"> 문자열로 </span>리턴한다.
+	</p>
+	<p>
+		버튼을 포함한
+		<button name="oktbtn">button</button>
+		문장이다.
+	</p>
+	<div id="console"></div>
+</body>
+</html>

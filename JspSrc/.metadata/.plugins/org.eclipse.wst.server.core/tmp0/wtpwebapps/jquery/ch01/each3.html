@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.highlight_0 {
+	background-color: green;
+	color: white;
+}
+
+.highlight_1 {
+	background-color: yellow;
+}
+
+.highlight_2 {
+	background-color: pink;
+}
+
+.highlight_3 {
+	background-color: blue;
+	color: white;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('h1').each(function(index, item) {
+			$(this).addClass('highlight_' + index);
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>점심시간</h1>
+	<h1>점심시간</h1>
+	<h1>점심시간</h1>
+	<h1>점심시간</h1>
+</body>
+</html>

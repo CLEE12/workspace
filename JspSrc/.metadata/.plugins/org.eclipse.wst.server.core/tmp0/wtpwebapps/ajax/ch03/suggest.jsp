@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" import="java.util.*"%>
+<%!String[] keywords = { "AJAX", "AJAX프로그램", "자바", "자바프로그램", "자 졸리지", "JSP", "JAVA" };
+
+	public List<String> search(String key) {
+		if (key == null || key.equals("")) {
+			return Collections.EMPTY_LIST;
+		}
+		String keyWord = key.toUpperCase();
+		List<String> list = new ArrayList<>();
+		for (int i = 0; i < keywords.length; i++) {
+			if (keywords[i].startsWith(keyWord)) {
+				list.add(keywords[i]);
+			}
+		}
+		return list;
+	}%>
+<%
+	request.setCharacterEncoding("utf-8");
+	String key = request.getParameter("keyword");
+	List<String> list = search(key);
+	out.println(list.size() + "|");
+	for (int i = 0; i < list.size(); i++) {
+		out.println(list.get(i));
+		if (i != (list.size() - 1)) {
+			out.println(",");
+		}
+	}
+%>

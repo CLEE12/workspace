@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+span {
+	font-size: 25px;
+	color: red;
+}
+</style>
+<script type="text/javascript" src="../js/httpRequest.js"></script>
+<script type="text/javascript">
+	function mx() {
+		sendRequest("temp.jsp", null, result, 'get');
+	}
+	function result() {
+		if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+			var temp = document.getElementById("temp");
+			var txt = httpRequest.responseText;
+			temp.innerHTML = txt;
+			var txtArr = txt.split(",");
+			var floatArr = new Array(txtArr.length);
+			for (var i = 0; i < txtArr.length; i++) {
+				floatArr[i] = parseFloat(txtArr[i]);
+			}
+			var max = 0;
+			for (var i = 0; i < floatArr.length; i++) {
+				if (max < floatArr[i])
+					max = floatArr[i];
+			}
+			var m = document.getElementById("max");
+			m.innerHTML = max;
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="temp"></div>
+	최고온도는
+	<span id="max"></span>입니다
+	<br>
+	<button onclick="mx()">최고온도 보기</button>
+</body>
+</html>

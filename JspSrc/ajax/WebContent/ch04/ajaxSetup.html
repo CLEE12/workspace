@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('button').click(function() {
+			var sendData = 'name=' + $('#name').val();
+			$.ajaxSetup({
+				type : 'post',
+				url : 'welcome.jsp',
+				dataType : 'text',
+				success : function(msg) {
+					$('#k').html(msg);
+				}
+			});
+			$.ajax({
+				data : sendData
+			});
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<form>
+		이름 : <input type="text" name="name" id="name">
+		<p>
+			<button>확인</button>
+		<p>
+		<div id="k"></div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" version="2.2">
+<tlib-version>1.0</tlib-version>
+<short-name>tool</short-name>
+
+<tag>
+	<name>StarLine</name>
+	<tag-class>tool.StarLine</tag-class>
+	<body-content>empty</body-content>
+</tag>
+
+<tag>
+	<name>nStarLine</name>
+	<tag-class>tool.newStarLine</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>size</name>
+		<type>java.lang.Integer</type>
+		<required>true</required>
+	</attribute>
+	<attribute>
+		<name>color</name>
+		<type>java.lang.String</type>
+		<required>true</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>dLine</name>
+	<tag-class>tool.DoubleLine</tag-class>
+	<body-content>empty</body-content>
+	<dynamic-attributes>true</dynamic-attributes>
+</tag>
+
+<tag>
+	<name>Box</name>
+	<tag-class>tool.Box</tag-class>
+	<body-content>scriptless</body-content>
+</tag>
+
+<tag>
+	<name>RW</name>
+	<tag-class>tool.ReplaceWrite</tag-class>
+	<body-content>scriptless</body-content>
+	<attribute>
+		<name>oldWord</name>
+		<type>java.lang.String</type>
+		<required>true</required>
+	</attribute>
+	<attribute>
+		<name>newWord</name>
+		<type>java.lang.String</type>
+		<required>true</required>
+	</attribute>
+</tag>
+
+<tag>
+	<name>min</name>
+	<tag-class>tool.Minimum</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>num1</name>
+		<type>java.lang.Integer</type>
+		<required>true</required>
+	</attribute>
+	<attribute>
+		<name>num2</name>
+		<type>java.lang.Integer</type>
+		<required>true</required>
+	</attribute>
+	<variable>
+		<name-given>minimum</name-given>
+		<variable-class>java.lang.Integer</variable-class>
+		<scope>AT_END</scope>
+	</variable>
+</tag>
+
+<tag>
+	<name>NewMin</name>
+	<tag-class>tool.NewMinimum</tag-class>
+	<body-content>empty</body-content>
+	<attribute>
+		<name>num1</name>
+		<type>java.lang.Integer</type>
+		<required>true</required>
+	</attribute>
+	<attribute>
+		<name>num2</name>
+		<type>java.lang.Integer</type>
+		<required>true</required>
+	</attribute>
+	<attribute>
+		<name>var</name>
+		<type>java.lang.String</type>
+		<required>true</required>
+	</attribute>
+	<variable>
+		<name-from-attribute>var</name-from-attribute>
+		<variable-class>java.lang.Integer</variable-class>
+		<scope>AT_END</scope>
+	</variable>
+</tag>
+
+
+</taglib>

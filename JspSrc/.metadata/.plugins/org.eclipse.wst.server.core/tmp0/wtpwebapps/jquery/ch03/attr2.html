@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+span {
+	margin: 40px;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('img').attr({
+			'src' : '../images/im1.jpg',
+			'alt' : '삐뽀',
+			'width' : '100px'
+		}).css('margin', '10px');
+		$('span').text($('img').attr('alt'));
+	});
+</script>
+</head>
+<body>
+	<img alt="" src="">
+	<img alt="" src="">
+	<img alt="" src="">
+	<br>
+	<span></span>
+	<span></span>
+	<span></span>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var result = new Array();
+		$('b').parents().each(function(index) {
+			result[index] = this.tagName;
+		});
+		// $('b').append(result.reverse().join(', '));
+		$('b').append(result.join(', '));
+	});
+</script>
+</head>
+<body>
+	<div>
+		<p>
+			<span><b>부모 엘리먼트 검색 : </b></span>
+		</p>
+	</div>
+</body>
+</html>

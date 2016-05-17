@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var list = $.makeArray($('div'));
+		var arr = list.reverse();
+		$('button').click(function() {
+			$('body').append(arr);
+		});
+	});
+</script>
+</head>
+<body>
+	<button>클릭</button>
+	<div>설현</div>
+	<div>수지</div>
+	<div>IU</div>
+	<div>유즈</div>
+	<div>하니</div>
+</body>
+</html>

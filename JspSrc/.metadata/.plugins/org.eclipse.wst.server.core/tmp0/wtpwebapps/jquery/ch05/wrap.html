@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.border {
+	width: 60px;
+	margin: 10px;
+	padding: 5px 20px;
+	border: 2px solid red;
+	float: left;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// $('p').wrap('<div class=border></div>');
+		$('p').wrapAll('<div class=border></div>');
+	});
+</script>
+</head>
+<body>
+	<p>Racoon's</p>
+	<div>
+		<p>jQuery</p>
+	</div>
+	<p>Mobile</p>
+	<p>Story</p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var list = [ 'Jessica', 'Tiffany', 'Sunny', 'crystal', 'G.NA' ];
+		$.each(list, function(index, item) {
+			$('ol').append('<li>' + item + '</li>');
+		});
+	});
+</script>
+</head>
+<body>
+	<ol></ol>
+</body>
+</html>

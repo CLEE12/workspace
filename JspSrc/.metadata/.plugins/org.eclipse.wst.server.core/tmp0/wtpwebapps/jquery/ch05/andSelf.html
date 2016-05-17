@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+<
+style>p, div {
+	margin: 5px;
+	padding: 5px;
+}
+
+.border {
+	border: 2px solid red;
+}
+
+.background {
+	background: yellow;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* $('div').find('p').addClass('background')
+			.addClass('border'); */
+		$('div').find('p').addClass('background').andSelf().addClass('border');
+	});
+</script>
+</head>
+<body>
+	<div>
+		<p>첫째 문장</p>
+		<p>둘째 문장</p>
+	</div>
+</body>
+</html>

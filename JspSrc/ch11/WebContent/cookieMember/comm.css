@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: 궁서;
+	background-color: #EAEAEA
+}
+
+table {
+	background-color: #BDBDBD;
+	height: 300px;
+	width: 100%
+}
+
+th {
+	background-color: #D4F4FA
+}
