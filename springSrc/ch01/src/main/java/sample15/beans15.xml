@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="md" class="sample15.dao.MemberDaoImpl"></bean>
+	<bean id="mi" class="sample15.service.MemberInsertImpl">
+		<property name="md" ref="md"></property>
+	</bean>
+	<bean id="mp" class="sample15.service.MemberPrinter"></bean>
+	<bean id="pl" class="sample15.service.PrintListImpl">
+		<property name="md" ref="md"></property>
+		<property name="mp" ref="mp"></property>
+	</bean>
+	<bean id="cp" class="sample15.service.ChanagePasswordImpl">
+		<property name="md" ref="md"></property>
+	</bean>
+</beans>

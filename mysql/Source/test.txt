@@ -1,0 +1,83 @@
+-- MySQL dump 10.13  Distrib 5.6.10, for Win32 (x86)
+--
+-- Host: localhost    Database: test
+-- ------------------------------------------------------
+-- Server version	5.6.10
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `division`
+--
+
+DROP TABLE IF EXISTS `division`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `division` (
+  `dno` int(11) NOT NULL,
+  `dname` varchar(15) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `position` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`dno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `division`
+--
+
+LOCK TABLES `division` WRITE;
+/*!40000 ALTER TABLE `division` DISABLE KEYS */;
+INSERT INTO `division` VALUES (10,'회계팀','032-322-1111','인천'),(20,'연구소','051-2222-2222','부산'),(30,'영업팀','02-3322-33333','서울'),(40,'마케팅팀','031-502-1234','인천');
+/*!40000 ALTER TABLE `division` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `personal`
+--
+
+DROP TABLE IF EXISTS `personal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `personal` (
+  `pno` int(11) NOT NULL,
+  `pname` varchar(10) DEFAULT NULL,
+  `job` varchar(15) DEFAULT NULL,
+  `manager` int(11) DEFAULT NULL,
+  `startdate` date DEFAULT NULL,
+  `pay` int(11) DEFAULT NULL,
+  `bonus` int(11) DEFAULT NULL,
+  `dno` int(11) NOT NULL,
+  PRIMARY KEY (`pno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `personal`
+--
+
+LOCK TABLES `personal` WRITE;
+/*!40000 ALTER TABLE `personal` DISABLE KEYS */;
+INSERT INTO `personal` VALUES (1001,'bill','president',NULL,'1989-01-10',7000,NULL,10),(1111,'smith','manager',1001,'1990-12-17',1000,NULL,10),(1112,'ally','salesman',1116,'1991-02-20',1600,500,30),(1113,'word','salesman',1116,'1992-02-24',1450,300,30),(1114,'james','manager',1001,'1990-04-12',3975,NULL,20),(1116,'johnson','manager',1001,'1991-05-01',3550,NULL,30),(1118,'martin','analyst',1111,'1991-09-09',3450,NULL,10),(1121,'kim','clerk',1114,'1990-12-08',4000,NULL,20),(1123,'lee','salesman',1116,'1991-09-23',1200,0,30),(1226,'park','analyst',1111,'1990-01-03',2500,NULL,10);
+/*!40000 ALTER TABLE `personal` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-11-21 16:16:47

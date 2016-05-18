@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="member">
+  <typeAlias alias="member" 	type="member.model.Member"/>
+  <resultMap id="MemberResult" 	class="member">
+    <result property="id" 		column="id"/>
+    <result property="pass" 	column="pass"/>
+    <result property="name" 	column="name"/>
+    <result property="tel" 		column="tel"/>
+    <result property="addr" 	column="addr"/>
+    <result property="regDate" 	column="regDate"/>
+  </resultMap>
+  <insert id="insert" parameterClass="member">
+    insert into member4 values (#id#,#pass#,#name#,
+	      #tel#, #addr#, sysdate )
+  </insert>
+  <select id="idCheck" parameterClass="String" resultClass="String">
+  	select id from member4 where id = #id#
+  </select>
+  <select id="loginChk" parameterClass="member" resultClass="String">
+  	select pass from member4 where id = #id#
+  </select>
+  <select id="select" parameterClass="String" resultClass="member">
+  	select * from member4 where id=#id#
+  </select>
+  <delete id="delete" parameterClass="String">
+  	delete from member4 where id=#id#
+  </delete>
+  <update id="update" parameterClass="member">
+  	update member4 set pass=#pass#,name=#name#,tel=#tel#,
+  		addr=#addr# where id=#id#
+  </update>
+</sqlMap>

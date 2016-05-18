@@ -1,0 +1,4 @@
+10	finance	032-111-1111	inchon
+20	research	061-2222-2222	busan
+30	sales	02-3333-3333	seoul
+40	maketing	031-5555-5555	suwon

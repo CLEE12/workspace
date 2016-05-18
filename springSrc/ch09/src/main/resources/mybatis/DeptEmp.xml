@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="deptEmp">
+	<!-- Use type aliases to avoid typing the full classname every time. -->
+	<resultMap id="DeptEmpResult"	type="deptEmp">
+		<result property="empno" 	column="empno" />
+		<result property="ename" 	column="ename" />
+		<result property="job" 		column="job" />
+		<result property="mgr" 		column="mgr" />
+		<result property="hiredate" column="hiredate" />
+		<result property="sal" 		column="sal" />
+		<result property="comm" 	column="comm" />
+		<result property="deptno" 	column="deptno" />	
+		<result property="dname" 	column="dname" />	
+		<result property="loc" 		column="loc" />		
+	</resultMap>
+	<select id="list" resultMap="DeptEmpResult">
+		select empno,ename,job,hiredate, sal,e.deptno,
+			dname,loc from emp e,dept d where e.deptno=d.deptno
+	</select>
+</mapper>

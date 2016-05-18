@@ -1,0 +1,6 @@
+/controllers/
+/dao/
+/exception/
+/logic/
+/messages.properties
+/mybatis/

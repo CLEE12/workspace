@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="mb" class="samp5.MessageBeanImpl">
+		<property name="name"><value>John</value></property>
+		<property name="greeting">
+			<value>Hello</value>
+		</property>
+	</bean>
+	<bean id="vh" class="samp6.VechicleImpl">
+		<property name="name"><value>홍길동</value></property>
+		<property name="vh">
+			<value>근두운</value>
+		</property>
+	</bean>
+</beans>

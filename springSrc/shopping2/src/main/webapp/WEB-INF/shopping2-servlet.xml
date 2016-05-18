@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	<!-- HandlerMapping -->
+	<bean id="handlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+				/index.do=indexController
+				/detail.do=indexController
+				/empList.do=empController
+				/empDetail.do=empController
+				<!-- /detail.do=detailController -->
+			</value>
+		</property>
+	</bean>
+	<!-- HandlerMapping -->
+<!-- 	<bean id="handlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/index.do">indexController</prop>
+				<prop key="/detail.do">detailController</prop>
+			</props>
+		</property>
+	</bean> -->
+	<!-- Controller -->
+	<bean id="indexController" class="shopping2.controller.IndexController" />
+	<bean id="detailController" class="shopping2.controller.DetailController" />
+	<bean id="empController" class="shopping2.controller.EmpController" />
+	<!-- ViewResolver -->
+	<bean id="internalResourceViewResolver" 
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix">
+			<value>WEB-INF/views/</value>
+		</property>
+		<property name="suffix">
+			<value>.jsp</value>
+		</property>
+	</bean>
+	<context:component-scan base-package="shopping2"></context:component-scan>
+</beans>

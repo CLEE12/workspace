@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	<!-- HandlerMapping -->
+	<context:annotation-config></context:annotation-config>
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<bean id="handlerMapping"
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<value>
+			/login.do=loginController
+			/login2.do=loginController
+			/memberlogin.do=memberController
+			/memberlogin2.do=memberController
+			</value>
+		</property>
+	</bean> 
+	<!-- Controller -->
+	<bean id="loginController"
+		 class="shopping3.controller.LoginController" />
+	<bean id="memberController"
+		 class="shopping3.controller.MemberController" />
+	<!-- ViewResolver -->
+	<bean id="internalResourceViewResolver" 
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.JstlView</value>
+		</property>
+		<property name="prefix"><value>WEB-INF/views/</value></property>
+		<property name="suffix"><value>.jsp</value></property>
+	</bean>
+	<context:component-scan base-package="shopping3"></context:component-scan>
+</beans>

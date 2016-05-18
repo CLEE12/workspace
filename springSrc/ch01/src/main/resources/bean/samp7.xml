@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="mb" class="samp7.MessageBeanImpl">
+		<constructor-arg>
+			<value>민주</value>
+		</constructor-arg>
+		<constructor-arg value="안 ~ 뇽"/>
+	</bean>
+	<bean id="vh" class="samp8.VechicleImpl">
+		<constructor-arg value="주민"></constructor-arg>
+		<constructor-arg value="스카이 퐁퐁"></constructor-arg>
+	</bean>
+</beans>

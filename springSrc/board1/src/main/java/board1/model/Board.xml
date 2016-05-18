@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="board">
+  <typeAlias alias="board" 		type="board1.model.Board"/>
+  <resultMap id="BoardResult" 	class="board">
+    <result property="id" 		column="id"/>
+    <result property="title" 	column="title"/>
+    <result property="writer" 	column="writer"/>
+    <result property="content" 	column="content"/>
+    <result property="hit" 		column="hit"/>
+    <result property="regDate" 	column="regDate"/>
+  </resultMap>
+  <select id="list" resultMap="BoardResult">
+    select * from board2 order by id desc
+  </select>
+  <select id="select" parameterClass="int" resultClass="board">
+  	select * from board2 where id=#id#
+  </select>
+  <insert id="insert" parameterClass="board">
+  	<selectKey keyProperty="id" type="pre" resultClass="int">
+  		select nvl(max(id),0)+1 from board2
+  	</selectKey>
+	    insert into board2 values (#id#,#title#,#writer#,
+	      #content#, 0, sysdate )
+  </insert>
+  <update id="updateHit" parameterClass="int">
+  	update board2 set hit = hit+1 where id = #id#
+  </update>
+  <update id="update" parameterClass="board">
+  	update board2 set title=#title#,writer=#writer#,
+  		content=#content# where id = #id#
+  </update>
+  <delete id="delete"  parameterClass="int">
+  	delete from board2 where id=#id#
+  </delete>
+</sqlMap>
