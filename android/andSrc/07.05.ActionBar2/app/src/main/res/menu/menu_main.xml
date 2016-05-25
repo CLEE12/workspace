@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ch.a0705actionbar.MainActivity">
+    <item android:icon="@android:drawable/sym_action_call"
+        android:id="@+id/tel"
+        android:orderInCategory="100"
+        android:title="전화"
+        app:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/sym_action_email"
+        android:id="@+id/email"
+        android:orderInCategory="100"
+        android:title="이메일"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@android:drawable/sym_action_chat"
+        android:id="@+id/chat"
+        android:orderInCategory="100"
+        android:title="채팅"
+        app:showAsAction="ifRoom" />
+</menu>

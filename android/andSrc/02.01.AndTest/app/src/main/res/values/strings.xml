@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">자기소개</string>
+    <string name="intro">
+        1. 이름 : 강병준\n
+        2. 전화 : tel:010-3367-4088 \n
+        3. 이메일 : kbj010@hanmail.net \n
+        4. 홐피 : http://www.choongang.co.kr \n
+        5. 특징 : 까벙한 사람
+    </string>
+</resources>

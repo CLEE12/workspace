@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ch.a0610longclick.MainActivity"
+    android:orientation="vertical">
+    <Button
+        android:textSize="20sp"
+        android:onClick="mOnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="증가"
+        android:id="@+id/incr" />
+    <Button
+        android:textSize="20sp"
+        android:onClick="mOnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="감소"
+        android:id="@+id/desc" />
+    <TextView
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView" />
+</LinearLayout>

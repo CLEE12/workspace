@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="짜장" android:id="@+id/jjajang"></item>
+    <item android:title="짬뽕" android:id="@+id/jjambong"></item>
+    <item android:title="기타" android:id="@+id/etc">
+        <menu>
+            <item android:title="우동" android:id="@+id/udong"></item>
+            <item android:title="만두" android:id="@+id/mandoo"></item>
+        </menu>
+    </item>
+</menu>
